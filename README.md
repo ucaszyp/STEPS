@@ -30,7 +30,7 @@ $ pip install -r requirements.txt
 
 ## Dataset
 
-For data preparation of RobotCar-Night and nuScenes-Night datasets, we follow The dataset used in "Regularizing Nighttime Weirdness: Efficient Self-supervised Monocular Depth Estimation in the Dark" [pdf](https://arxiv.org/abs/2108.03830) [github](https://github.com/w2kun/RNW). Our work is based on [RobotCar](https://robotcar-dataset.robots.ox.ac.uk) and [nuScenes](https://www.nuscenes.org/nuscenes).  `(2014-12-16-18-44-24, 2014-12-09-13-21-02)` of RobotCar and `(Package 01, 02, 05, 09, 10)` of nuScenes is enough for running the code. You can use the above official toolboxes produce the ground truth depth. Or you can download our pre-processed dataset from the following link.
+For data preparation of RobotCar-Night and nuScenes-Night datasets, we follow The dataset used in "Regularizing Nighttime Weirdness: Efficient Self-supervised Monocular Depth Estimation in the Dark" [[pdf](https://arxiv.org/abs/2108.03830), [github]](https://github.com/w2kun/RNW). Our work is based on [RobotCar](https://robotcar-dataset.robots.ox.ac.uk) and [nuScenes](https://www.nuscenes.org/nuscenes).  `(2014-12-16-18-44-24, 2014-12-09-13-21-02)` of RobotCar and `(Package 01, 02, 05, 09, 10)` of nuScenes is enough for running the code. You can use the above official toolboxes produce the ground truth depth. Or you can download our pre-processed dataset from the following link.
 [dataset](https://drive.google.com/drive/folders/1n2WsaGtB-tRiPyee-vAYF6Cd7EZr4RGe)
 
 
@@ -62,7 +62,7 @@ data
 ```
 
 ## Training
-1. For the nuScenes-Night dataset, we recommend denoising first. We using AP-BSN [pdf](https://arxiv.org/abs/2203.11799) [github](https://github.com/wooseoklee4/AP-BSN) to preprocess both train and test dataset. Or you can download our pre-processed dataset from the above link
+1. For the nuScenes-Night dataset, we recommend denoising first. We using AP-BSN [pdf](https://arxiv.org/abs/2203.11799), [github](https://github.com/wooseoklee4/AP-BSN) to preprocess both train and test dataset. Or you can download our pre-processed dataset from the above link
 2. Train a self-supervised model on daytime data, by
 
    ```shell
@@ -85,19 +85,10 @@ sh scripts/test_(rc/ns).sh
 ```
 ## Pre-trained Models
 For a quick test, you can download pretrained checkpoints of our method.
+
 [checkpoints](https://drive.google.com/drive/folders/16bqgIYBDg4dd9eGFWYL6Cyp5xCs4-DbI)
 
 1. Test on nuScenes(without denoising)
-```shell
-+---------------------------------------------------------------------------+
-|                             Evaluation Result                             |
-+---------------------------------------------------------------------------+
-|  abs_rel  |  sq_rel  |   rmse  |  rmse_log  |    a1   |    a2   |    a3   |
-+---------------------------------------------------------------------------+
-|   0.303   |  3.522   |  9.201  |   0.390    |  0.551  |  0.791  |  0.901  |
-+---------------------------------------------------------------------------+
-```
-1. Test on nuScenes(with denoising)
 ```shell
 +---------------------------------------------------------------------------+
 |                             Evaluation Result                             |
