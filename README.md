@@ -30,7 +30,7 @@ $ pip install -r requirements.txt
 
 ## Dataset
 
-For data preparation of RobotCar-Night and nuScenes-Night datasets, we follow The dataset used in "Regularizing Nighttime Weirdness: Efficient Self-supervised Monocular Depth Estimation in the Dark" |[pdf](https://arxiv.org/abs/2108.03830), [github](https://github.com/w2kun/RNW)|. Our work is based on [RobotCar](https://robotcar-dataset.robots.ox.ac.uk) and [nuScenes](https://www.nuscenes.org/nuscenes).  `(2014-12-16-18-44-24, 2014-12-09-13-21-02)` of RobotCar and `(Package 01, 02, 05, 09, 10)` of nuScenes is enough for running the code. You can use the above official toolboxes produce the ground truth depth. Or you can download our pre-processed dataset from the following link.
+For data preparation of RobotCar-Night and nuScenes-Night datasets, we follow The dataset used in "Regularizing Nighttime Weirdness: Efficient Self-supervised Monocular Depth Estimation in the Dark" |[pdf](https://arxiv.org/abs/2108.03830), [github](https://github.com/w2kun/RNW)|. Our work is based on [RobotCar](https://robotcar-dataset.robots.ox.ac.uk) and [nuScenes](https://www.nuscenes.org/nuscenes).  `(2014-12-16-18-44-24, 2014-12-09-13-21-02)` of RobotCar and `(Package 01, 02, 05, 09, 10)` of nuScenes is enough for running the code. You can use the above official toolboxes produce the ground truth depth. Or you can download our pre-processed groudtruth and denoised dataset from the following link.
 
 |[dataset](https://drive.google.com/drive/folders/1n2WsaGtB-tRiPyee-vAYF6Cd7EZr4RGe)|
 
