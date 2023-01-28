@@ -63,7 +63,7 @@ data
 ```
 
 ## Training
-1. For the nuScenes-Night dataset, we recommend denoising first. We using AP-BSN |[pdf](https://arxiv.org/abs/2203.11799), [github](https://github.com/wooseoklee4/AP-BSN)| to preprocess both train and test dataset. Or you can download our pre-processed dataset from the above link
+1. For the nuScenes-Night dataset, we strongly recommend you to denoise first. We using AP-BSN |[pdf](https://arxiv.org/abs/2203.11799), [github](https://github.com/wooseoklee4/AP-BSN)| to preprocess both train and test dataset. Or you can download our pre-processed dataset from the above link
 2. Train a self-supervised model on daytime data, by
 
    ```shell
