@@ -1,10 +1,10 @@
-# Joint Self-supervised Nighttime Image Enhancement and Depth Estimation (ICRA 2023)
+# STEPS: Joint Self-supervised Nighttime Image Enhancement and Depth Estimation (ICRA 2023)
 Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang and Dongbin Zhao
 Institute of Automation, Chinese Academy of Sciences; Institute for AI Industry Research (AIR), Tsinghua University
 
 ## Introduction
 
-This is the official repository for *STEPS: Joint $\underline{S}$elf-supervised Nighttime Image Enhancement and Depth Estimation*. You can find our paper at [arxiv](https://arxiv.org/abs/). In this repository, we release the RobotCar-Night and nuScenes-Night dataset, as well as the code.
+This is the official repository for *STEPS: Joint Self-supervised Nighttime Image Enhancement and Depth Estimation*. You can find our paper at [arxiv](https://arxiv.org/abs/). In this repository, we release the RobotCar-Night and nuScenes-Night dataset, as well as the code.
 
 ![image-20211002220051137](README.assets/teaser.png)
 
