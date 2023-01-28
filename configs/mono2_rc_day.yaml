@@ -1,0 +1,42 @@
+
+total_epochs: 20
+imgs_per_gpu: &b 8
+workers_per_gpu: 4
+checkpoint_epoch_interval: 2
+
+dataset:
+    type: "robotcar"
+    frame_ids: &f [0, -1, 1]
+    width: &w 576
+    height: &h 320
+
+    robotcar:
+      root_dir: "day"
+      down_scale: True
+      num_out_scales: 5
+      gen_equ: True
+      equ_limit: 0.008
+      resize: False
+
+model:
+  name: "mono2"
+
+  depth_num_layers: 50
+  pose_num_layers: 18
+
+  learning_rate: 1.0e-4
+
+  frame_ids: *f
+  imgs_per_gpu: *b
+  height: *h
+  width: *w
+  scales: [0, 1, 2, 3, 4]
+  min_depth: 0.1
+  max_depth: 100.0
+
+  use_equ: True
+
+  automask: True
+  disp_norm: True
+
+  disparity_smoothness: 1.0e-3

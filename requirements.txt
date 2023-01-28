@@ -1,0 +1,6 @@
+mmcv>=1.5.2
+opencv-python>=4.5.5.64
+tqdm>=4.53
+tensorboardX>=2.5.1
+scikit-learn
+matplotlib

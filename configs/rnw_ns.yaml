@@ -1,0 +1,70 @@
+
+total_epochs: 30
+imgs_per_gpu: &b 1
+workers_per_gpu: 4
+checkpoint_epoch_interval: 2
+
+data_link: None
+
+dataset:
+  type: "multiple_nuscenes"
+  frame_ids: &f [ 0, -1, 1 ]
+  width: &w 768
+  height: &h 384
+
+  multiple_nuscenes:
+    subsets:
+      - name: "day"
+        weather: "day"
+      - name: "night"
+        weather: "night"
+    master: "night"
+    down_scale: False
+    num_out_scales: 5
+    gen_equ: True
+    equ_limit: 0.004
+    shuffle: True
+
+model:
+  name: "rnw"
+
+  day_config: "mono2_ns_day"
+  day_check_point: "checkpoints/mono2_ns_day/checkpoint_epoch=11.ckpt"
+
+  depth_num_layers: 50
+  pose_num_layers: 18
+
+  G_learning_rate: 1.0e-4
+  S_learning_rate: 1.0e-4
+
+  frame_ids: *f
+  imgs_per_gpu: *b
+  height: *h
+  width: *w
+  scales: [0, 1, 2, 3, 4]
+  min_depth: 0.1
+  max_depth: 100.0
+
+  use_equ: True
+
+  automask: True
+  disp_norm: True
+
+  disparity_smoothness: 1.0e-3
+
+  use_static_mask: True
+  use_illu_mask: True
+  use_hist_mask: False
+
+  illu_max: 0.9
+  illu_min: 0.1
+  p: 5
+  q: 5
+  equ_limit: 0.004
+
+  static_mask_quantile: 0.2
+
+  use_position_map: True
+  S_weight: 0.15
+  G_weight: 4.0e-4
+  D_weight: 4.0e-4
