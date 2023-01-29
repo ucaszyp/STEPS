@@ -1,7 +1,7 @@
-# STEPS: Joint Self-supervised Nighttime Image Enhancement and Depth Estimation (ICRA 2023)
-Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang and Dongbin Zhao
+# $\text{STEPS: Joint \underline{S}elf-supervised Nigh\underline{t}time Image \underline{E}nhancement and De\underline{p}th E\underline{s}timation (ICRA 2023)}$
+Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang and Dongbin Zhao$
 
-Institute of Automation, Chinese Academy of Sciences; Institute for AI Industry Research (AIR), Tsinghua University
+State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences; Institute for AI Industry Research (AIR), Tsinghua University
 
 ## Introduction
 
