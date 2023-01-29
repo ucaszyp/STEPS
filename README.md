@@ -63,7 +63,7 @@ data
       |__gt (to store ground truth depth maps w.r.t color)
 ```
 
-## Training
+## Train
 1. For the nuScenes-Night dataset, we strongly recommend you to denoise first. We using AP-BSN |[pdf](https://arxiv.org/abs/2203.11799), [github](https://github.com/wooseoklee4/AP-BSN)| to preprocess both train and test dataset. Or you can download our pre-processed dataset from the above link
 2. Train a self-supervised model on daytime data, by
 
@@ -79,14 +79,13 @@ data
 
 In default, checkpoints will be saved every two epochs.
 
-## Testing
+## Test
 To test on RobotCar-Night or nuScenes-Night, you can run
 
 ```shell
 sh scripts/test_(rc/ns).sh
 ```
-## Pre-trained Models
-For a quick test, you can download pretrained models of our method.
+For a quick test, you can download pretrained checkpoints of of our method.
 
 [checkpoints](https://drive.google.com/drive/folders/16bqgIYBDg4dd9eGFWYL6Cyp5xCs4-DbI)
 
