@@ -85,7 +85,7 @@ To test on RobotCar-Night or nuScenes-Night, you can run
 ```shell
 sh scripts/test_(rc/ns).sh
 ```
-For a quick test, you can download pretrained checkpoints of of our method.
+For a quick test, you can download pretrained checkpoints of of our method to `(./best)`.
 
 [checkpoints](https://drive.google.com/drive/folders/16bqgIYBDg4dd9eGFWYL6Cyp5xCs4-DbI)
 
@@ -121,3 +121,10 @@ For a quick test, you can download pretrained checkpoints of of our method.
 |   0.170   |  1.686   |  6.797  |   0.234    |  0.758  |  0.923  |  0.968  |
 +---------------------------------------------------------------------------+
 ```
+
+## EPE Dataset
+We propose CARLA-EPE, a photo-realistically enhanced nighttime dataset based upon CARLA. We leverage the stateof-the-art photorealism enhancement network [EPE](https://isl-org.github.io/PhotorealismEnhancement/) to transfer the style of the rendered images to a photorealistic one, resulting in a photorealistic nighttime dataset CARLA-EPE with dense ground truth of depth. You can download the whole dataset from the following link.
+
+|[dataset](https://drive.google.com/drive/folders/1n2WsaGtB-tRiPyee-vAYF6Cd7EZr4RGe)|
+
+![image-20211002220051137](README.assets/EPE.png)

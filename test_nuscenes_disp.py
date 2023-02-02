@@ -14,7 +14,7 @@ from datasets import NUSCENES_ROOT
 from models import MODELS
 from models.utils import disp_to_depth
 from utils import read_list_from_file, save_color_disp, save_disp
-
+import time
 # output dir
 _OUT_DIR = 'evaluation/ns_result/'
 
@@ -61,6 +61,7 @@ if __name__ == '__main__':
         if not os.path.exists(visualization_dir):
             os.mkdir(visualization_dir)
     # no grad
+    total_time = 0
     with torch.no_grad():
         # predict
         for idx, item in enumerate(tqdm(test_items)):
@@ -76,11 +77,14 @@ if __name__ == '__main__':
             t_rgb = to_tensor(rgb).unsqueeze(0).to(device)
             t_gray = to_tensor(gray).unsqueeze(0).to(device)
             # feed into net
+            a = time.time()
             outputs = net({('color', 0, 0): t_rgb,
                            ('color_aug', 0, 0): t_rgb,
                            ('color_gray', 0, 0): t_gray})
             disp = outputs[("disp", 0, 0)]
             scaled_disp, depth = disp_to_depth(disp, 0.1, 100)
+            b = time.time()
+            total_time += (b - a)
             depth = depth.cpu()[0, 0, :, :].numpy()
             # append
             predictions.append(depth)
@@ -91,7 +95,9 @@ if __name__ == '__main__':
                 color_fn = os.path.join("vis/ns_", '{}_rgb.png'.format("%03d" %idx))
                 save_color_disp(rgb[:, :, ::-1], scaled_disp, out_fn, max_p=95, dpi=256)
                 save_disp(rgb[:, :, ::-1], scaled_disp, out_fn, color_fn, max_p=95, dpi=256)
-
+    print("=========================")
+    fps = int(500 / total_time)
+    print(fps)
     # stack
     predictions = np.stack(predictions, axis=0)
     # save

@@ -29,7 +29,7 @@ model:
   name: "rnw"
 
   day_config: "mono2_rc_day"
-  day_check_point: "checkpoints/mono2_rc_day/checkpoint_epoch=11.ckpt"
+  day_check_point: "checkpoints/mono2_rc_day/checkpoint_epoch=5.ckpt"
 
   depth_num_layers: 50
   pose_num_layers: 18
@@ -65,7 +65,6 @@ model:
   static_mask_quantile: 0.1
 
   use_position_map: True
-  S_weight: 0.2
+  S_weight: 0.1
   G_weight: 4.0e-4
   D_weight: 4.0e-4
-# return 0.3*Fidelity_Loss + Smooth_Loss
