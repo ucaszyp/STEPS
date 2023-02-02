@@ -85,7 +85,7 @@ To test on RobotCar-Night or nuScenes-Night, you can run
 ```shell
 sh scripts/test_(rc/ns).sh
 ```
-For a quick test, you can download pretrained checkpoints of of our method to `(./best)`.
+For a quick test, you can download pretrained checkpoints of of our method to `./best`.
 
 [checkpoints](https://drive.google.com/drive/folders/16bqgIYBDg4dd9eGFWYL6Cyp5xCs4-DbI)
 
