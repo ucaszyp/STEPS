@@ -124,3 +124,13 @@ For a quick test, you can download pretrained checkpoints of of our method to `.
 We propose CARLA-EPE, a photo-realistically enhanced nighttime dataset based upon CARLA. We leverage the stateof-the-art photorealism enhancement network [EPE](https://isl-org.github.io/PhotorealismEnhancement/) to transfer the style of the rendered images to a photorealistic one, resulting in a photorealistic nighttime dataset CARLA-EPE with dense ground truth of depth. You can download the whole dataset [here](https://drive.google.com/drive/folders/1n2WsaGtB-tRiPyee-vAYF6Cd7EZr4RGe).
 
 ![image-20211002220051137](README.assets/EPE.png)
+
+## Citation
+If you find this work useful for your research, please cite our paper:
+```shell
+todo
+```
+
+## Acknowledgement
+We would like to thank the reviewers for their constructive comments and the authors of SCI and RNW for their help and suggestions.
+This work was supported by the National Natural Science Foundation of China (NSFC) under Grants No. 62173324 and Tsinghua-Toyota Joint Research Fund (2022393009). 
