@@ -83,9 +83,7 @@ To test on RobotCar-Night or nuScenes-Night, you can run
 ```shell
 sh scripts/test_(rc/ns).sh
 ```
-For a quick test, you can download pretrained checkpoints of of our method to `./best`.
-
-[checkpoints](https://drive.google.com/drive/folders/16bqgIYBDg4dd9eGFWYL6Cyp5xCs4-DbI)
+For a quick test, you can download pretrained [checkpoints]((https://drive.google.com/drive/folders/16bqgIYBDg4dd9eGFWYL6Cyp5xCs4-DbI)) of of our method to `./best`.
 
 1. Test on nuScenes(without denoising)
 ```shell
@@ -132,5 +130,5 @@ todo
 ```
 
 ## Acknowledgement
-We would like to thank the reviewers for their constructive comments and the authors of SCI and RNW for their help and suggestions.
+We would like to thank the reviewers for their constructive comments and the authors of [SCI](https://openaccess.thecvf.com/content/CVPR2022/html/Ma_Toward_Fast_Flexible_and_Robust_Low-Light_Image_Enhancement_CVPR_2022_paper.html) and [RNW](https://arxiv.org/abs/2108.03830) for their help and suggestions.
 This work was supported by the National Natural Science Foundation of China (NSFC) under Grants No. 62173324 and Tsinghua-Toyota Joint Research Fund (2022393009). 
