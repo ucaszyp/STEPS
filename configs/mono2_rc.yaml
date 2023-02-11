@@ -1,20 +1,21 @@
+
 total_epochs: 20
 imgs_per_gpu: &b 2
 workers_per_gpu: 4
-checkpoint_epoch_interval: 2
+checkpoint_epoch_interval: 1
 
 dataset:
-    type: "nuscenes"
+    type: "robotcar"
     frame_ids: &f [0, -1, 1]
-    width: &w 768
-    height: &h 384
+    width: &w 576
+    height: &h 320
 
-    nuscenes:
-      weather: "day"
-      down_scale: False
+    robotcar:
+      root_dir: "day"
+      down_scale: True
       num_out_scales: 5
       gen_equ: True
-      equ_limit: 0.004
+      equ_limit: 0.008
       resize: False
 
 model:
@@ -33,7 +34,7 @@ model:
   min_depth: 0.1
   max_depth: 100.0
 
-  use_equ: False
+  use_equ: True
 
   automask: True
   disp_norm: True
